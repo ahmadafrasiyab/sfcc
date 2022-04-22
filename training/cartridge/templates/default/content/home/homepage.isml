@@ -1,0 +1,13 @@
+<b>hello worlds!</b>
+${pdict.CurrentSession.customer.profile.lastName}
+<isset name="vulnerable" value="${pdict.CurrentSession.customer.profile.lastName}" scope="page"></isset>
+<isSet name="amount" value="<h1 onmouseover='alert()'>Welcome</h2>" scope="page"></isset>
+<isprint value=${pdict.CurrentSession.customer.profile.lastName} encoding="off"></isprint><isprint value=${amount} encoding="off"/>
+<isprint value =${request.httpParameterMap.test.getStringValue()} encoding="off"></isprint>
+
+${request.httpParameterMap.test.getStringValue()}
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+var test = ${vulnerable};
+var t = "${request.httpParameterMap.test.getStringValue()}";
+</script>

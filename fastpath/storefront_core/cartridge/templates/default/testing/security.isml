@@ -1,0 +1,16 @@
+<!--- TEMPLATENAME: security.isml --->
+
+<html>
+<head>
+</head>
+<body>
+Current site is: ${dw.system.Site.getCurrent().getName()}
+test
+
+<form method="post" action="/on/demandware.store/Sites-SiteGenesis-Site/default/Security-CSRFTest">
+<input id="test" value="test" name="test" />
+<input type="submit" value="submit" />
+</form>
+
+</body>
+</html>
